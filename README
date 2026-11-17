@@ -1,0 +1,88 @@
+Blood Bank Inventory and Request Management System
+A web-based application developed to help a blood bank manage donor details, blood stock, hospital blood requests, blood issue records, availability, and reports from one place.
+Project Overview
+The system is designed to reduce manual record keeping and make it easier for blood bank staff to manage blood donations and requests. The administrator can maintain donor information, monitor available blood units, review requests, issue blood, and view reports. Hospitals can submit blood requests through the request page.
+Technologies Used
+- Frontend: HTML, CSS, JavaScript
+- Backend: PHP
+- Database: MySQL
+- Local server: XAMPP (Apache and MySQL)
+Main Features
+- Admin login with password verification
+- Donor record management
+- Blood inventory management
+- Hospital blood request submission
+- Request review and status management
+- Blood issue record management
+- Blood group availability view
+- Reports
+Blood Groups Supported
+A+, A-, B+, B-, AB+, AB-, O+, O-
+Project Files
+File	Purpose
+config.php	Database connection, session helpers, and shared page functions
+database.sql	Creates the bloodbank database and its tables
+login.php	Admin login
+logout.php	Ends the admin session
+dashboard.php	Admin dashboard
+donors.php	Donor management
+inventory.php	Blood stock management
+request.php	Public hospital blood request form
+requests.php	Admin request management
+issue.php	Blood issue records
+availability.php	Blood availability
+reports.php	Reports
+style.css	Page styling
+script.js	Client-side JavaScript
+
+
+Requirements
+- Windows, Linux, or macOS
+- XAMPP or another PHP and MySQL environment
+- A modern web browser
+Installation and Setup (XAMPP)
+1. Install and open XAMPP.
+2. Start Apache and MySQL from the XAMPP Control Panel.
+3. Download or clone this repository.
+4. Copy the project folder into XAMPP's htdocs directory. For example:
+   C:\xampp\htdocs\blood-bank
+5. Open phpMyAdmin in your browser:
+   http://localhost/phpmyadmin
+6. Select Import, choose the project's database.sql file, and run the import. The SQL file creates the bloodbank database and required tables.
+7. Check the database settings in config.php. The current configuration uses:
+   - Host: localhost
+   - Username: root
+   - Password: empty
+   - Database: bloodbank
+   Update these values if your local MySQL setup is different.
+8. Open the application:
+   http://localhost/blood-bank/login.php
+Default Admin Login
+On the first visit, the application creates the default administrator account if the admin table is empty.
+- Username: admin
+- Password: admin123
+Change the default credentials and secure the application before using it outside a local development environment. Do not publish real passwords or database credentials.
+How to Use
+1. Sign in using the administrator account.
+2. Add and maintain donor records.
+3. Add or update blood stock details in the inventory.
+4. Hospitals can open the request page and submit the required blood group and quantity.
+5. The administrator can review requests and update their status.
+6. Record blood units issued and check availability and reports.
+Database Tables
+The supplied database.sql file creates these tables:
+- admin – administrator login details
+- donors – donor information
+- blood_units – blood stock and expiry details
+- requests – hospital blood requests and their status
+- issues – records of issued blood units
+Important Notes
+- This repository is a student project intended for learning and demonstration.
+- Run it locally with XAMPP unless you have configured a suitable PHP/MySQL web server.
+- The default database connection in config.php is intended for a typical local XAMPP installation.
+- Use test data for demonstrations. Do not use this project to make real-world medical or emergency decisions.
+- Before deployment, review authentication, authorization, input validation, database security, backups, and privacy protections.
+Author
+Prashantha H N
+Repository
+Blood Bank Inventory and Request Management System
